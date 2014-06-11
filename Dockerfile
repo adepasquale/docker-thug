@@ -8,11 +8,11 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y dist-upgrade
 # Install packets for normal usage
 RUN apt-get -y install --no-install-recommends graphviz librabbitmq1 nano python-chardet python-cssutils python-html5lib python-httplib2 libemu2 python-lxm\
-l python-magic python-pefile python-pika python-pip python-pydot python-pymongo python-pyparsing python-requests python-yara python-zope.interface vim
+l python-magic python-pika python-pip python-pydot python-pymongo python-pyparsing python-requests python-yara python-zope.interface vim
 # Install packets needed for building thug
 RUN apt-get -y install --no-install-recommends build-essential curl git gyp libboost-python-dev libboost-thread-dev libboost-system-dev python-dev subversi\
 on libemu-dev
-RUN pip install -q jsbeautifier rarfile beautifulsoup4
+RUN pip install -q jsbeautifier rarfile beautifulsoup4 pefile
 RUN svn checkout http://pyv8.googlecode.com/svn/trunk/ /usr/local/src/pyv8
 RUN curl  -s https://raw.githubusercontent.com/buffer/thug/master/patches/PyV8-patch1.diff -o /usr/local/src/PyV8-patch1.diff
 RUN patch -d /usr/local/src/ -p0 < /usr/local/src/PyV8-patch1.diff
