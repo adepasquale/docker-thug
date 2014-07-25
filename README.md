@@ -1,7 +1,7 @@
 Thug
 ====
 
-A dockerized Thug https://github.com/buffer/thug
+A dockerized Thug https://github.com/buffer/thug . This container is based on Thug 0.5
 
 Get it from the Docker Index https://registry.hub.docker.com/u/riker2000/thug/
 
